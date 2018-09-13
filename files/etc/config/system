@@ -1,0 +1,18 @@
+# DPT-Module V1 system settings
+# (C) 2018 Daan Pape <daan@dptechnics.com>
+
+config system
+	option hostname 'DPT-Module'
+	option timezone 'UTC'
+	option ttylogin '0'
+	option log_size '64'
+	option urandom_seed '0'
+
+config timeserver 'ntp'
+	option enabled '1'
+	option enable_server '0'
+	list server '0.lede.pool.ntp.org'
+	list server '1.lede.pool.ntp.org'
+	list server '2.lede.pool.ntp.org'
+	list server '3.lede.pool.ntp.org'
+

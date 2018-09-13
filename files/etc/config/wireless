@@ -1,0 +1,28 @@
+# DPT-Module V1 wireless settings
+# (C) 2018 Daan Pape <daan@dptechnics.com>
+
+config wifi-device          'radio0'
+	option type         'mac80211'
+	option channel      '11'
+	option hwmode       '11g'
+	option path         'platform/ar933x_wmac'
+	option htmode       'HT20'
+	option disabled     '0'
+
+config wifi-iface 'wifi-lan'
+	option device       'radio0'
+	option network      'lan'
+	option mode         'ap'
+	option ssid         'DPT-Module'
+	option encryption   'psk2'
+	option key          'dptechnics'
+	option disabled     '0'
+
+config wifi-iface 'wifi-wan'
+	option device       'radio0'
+	option network      'wlanwan'
+	option mode         'sta'
+	option ssid         '<fill in your WiFi SSID>'
+	option encryption   'psk2'
+	option key          '<fill in your network key>'
+	option disabled	    '1'
